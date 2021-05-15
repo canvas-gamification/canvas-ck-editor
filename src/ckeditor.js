@@ -82,22 +82,31 @@ Editor.builtinPlugins = [
     TableToolbar,
     TextTransformation,
     Underline,
-	Mathematics
+    Mathematics
 ];
 
 Editor.defaultConfig = {
-	toolbar: {
-		items: [
-			'math'
-		]
-	},
-	math: {
-		engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
-		lazyLoad: undefined, // async () => { ... }, called once before rendering first equation if engine doesn't exist. After resolving promise, plugin renders equations.
-		outputType: 'script', // or span
-		forceOutputType: false, // forces output to use outputType
-		enablePreview: true // Enable preview view
-	}
+    toolbar: {
+        items: [
+            'heading', '|',
+            'bold', 'italic', 'underline', '|',
+            'link', '|',
+            'bulletedList', 'numberedList',
+            'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor', '|',
+            'code', 'codeBlock', '|',
+            'insertTable', '|',
+            'outdent', 'indent', '|',
+            'uploadImage', 'blockQuote', 'math', '|',
+            'undo', 'redo'
+        ]
+    },
+    math: {
+        engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
+        lazyLoad: undefined, // async () => { ... }, called once before rendering first equation if engine doesn't exist. After resolving promise, plugin renders equations.
+        outputType: 'script', // or span
+        forceOutputType: false, // forces output to use outputType
+        enablePreview: true // Enable preview view
+    }
 }
 
 export default Editor;
