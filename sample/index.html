@@ -103,68 +103,10 @@
 	</footer>
 	<script src="../build/ckeditor.js"></script>
 	<script>ClassicEditor
-			.create( document.querySelector( '.editor' ), {
-				
-				toolbar: {
-					items: [
-						'heading',
-						'|',
-						'fontFamily',
-						'fontBackgroundColor',
-						'fontColor',
-						'fontSize',
-						'bold',
-						'underline',
-						'italic',
-						'link',
-						'bulletedList',
-						'numberedList',
-						'|',
-						'outdent',
-						'indent',
-						'|',
-						'code',
-						'codeBlock',
-						'specialCharacters',
-						'imageUpload',
-						'blockQuote',
-						'insertTable',
-						'mediaEmbed',
-						'undo',
-						'redo',
-						'removeFormat'
-					]
-				},
-				language: 'en',
-				image: {
-					toolbar: [
-						'imageTextAlternative',
-						'imageStyle:full',
-						'imageStyle:side'
-					]
-				},
-				table: {
-					contentToolbar: [
-						'tableColumn',
-						'tableRow',
-						'mergeTableCells'
-					]
-				},
-				licenseKey: '',
-				
-				
-			} )
+			.create( document.querySelector( '.editor' ))
 			.then( editor => {
 				window.editor = editor;
-		
-				
-				
-				
-		
-				
-				
-				
-			} )
+			})
 			.catch( error => {
 				console.error( 'Oops, something went wrong!' );
 				console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );

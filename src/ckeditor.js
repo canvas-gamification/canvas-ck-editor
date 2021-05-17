@@ -100,6 +100,17 @@ Editor.defaultConfig = {
             'undo', 'redo'
         ]
     },
+    codeBlock: {
+        languages: [
+            { language: 'java', label: 'Java' },
+        ]
+    },
+    fontFamily: {
+        options: [
+            'default',
+            'Typewriter',
+        ]
+    },
     math: {
         engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
         lazyLoad: undefined, // async () => { ... }, called once before rendering first equation if engine doesn't exist. After resolving promise, plugin renders equations.
