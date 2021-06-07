@@ -117,6 +117,14 @@ Editor.defaultConfig = {
         outputType: 'script', // or span
         forceOutputType: false, // forces output to use outputType
         enablePreview: true // Enable preview view
+    },
+    language: 'en',
+    image: {
+        toolbar: [
+            'imageTextAlternative',
+            'imageStyle:full',
+            'imageStyle:side'
+        ]
     }
 }
 
