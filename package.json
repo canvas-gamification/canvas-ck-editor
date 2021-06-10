@@ -2,7 +2,7 @@
   "name": "@canvas-gamification/ckeditor5",
   "author": "Carson Ricca",
   "description": "A custom CKEditor 5 build made for the canvas-gamification-ui",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "SEE LICENSE IN LICENSE.md",
   "main": "./build/ckeditor.js",
   "publishConfig": {
@@ -44,5 +44,8 @@
   },
   "scripts": {
     "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@wiris/mathtype-ckeditor5": "^7.26.1"
   }
 }
