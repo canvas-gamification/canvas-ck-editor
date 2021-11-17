@@ -39,7 +39,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
-import Mathematics from 'ckeditor5-math/src/math';
+import MathType from '@wiris/mathtype-ckeditor5';
 
 
 class Editor extends ClassicEditor {
@@ -69,7 +69,6 @@ Editor.builtinPlugins = [
     Link,
     List,
     MediaEmbed,
-    Mathematics,
     Paragraph,
     PasteFromOffice,
     RemoveFormat,
@@ -84,6 +83,7 @@ Editor.builtinPlugins = [
     TableToolbar,
     TextTransformation,
     Underline,
+    MathType
 ];
 
 Editor.defaultConfig = {
@@ -97,13 +97,13 @@ Editor.defaultConfig = {
             'code', 'codeBlock', '|',
             'insertTable', '|',
             'outdent', 'indent', '|',
-            'uploadImage', 'blockQuote', 'math', '|',
+            'uploadImage', 'blockQuote', 'MathType', '|',
             'undo', 'redo'
         ]
     },
     codeBlock: {
         languages: [
-            { language: 'java', label: 'Java' },
+            {language: 'java', label: 'Java'},
         ]
     },
     fontFamily: {
@@ -119,13 +119,6 @@ Editor.defaultConfig = {
             'imageStyle:full',
             'imageStyle:side'
         ]
-    },
-    math: {
-        engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
-        lazyLoad: undefined, // async () => { ... }, called once before rendering first equation if engine doesn't exist. After resolving promise, plugin renders equations.
-        outputType: 'script', // or span
-        forceOutputType: false, // forces output to use outputType
-        enablePreview: true // Enable preview view
     }
 }
 
